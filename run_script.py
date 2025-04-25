@@ -246,7 +246,7 @@ else:
     command = (
         f"cd /home/gem5/parsec-benchmark;"
         + "source env.sh;"
-        + f"parsecmgmt -a run -p {args.benchmark} -c gcc-hooks -i simmedium         -n {args.cores};"
+        + f"parsecmgmt -a run -p {args.benchmark} -c gcc-hooks -i simsmall         -n {args.cores};"
         + "sleep 5;"
         + "m5 exit;"
     )

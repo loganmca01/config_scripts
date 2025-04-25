@@ -17,7 +17,7 @@ for test in tests:
 
     args = test.split(" ")
     
-    s = "perf stat -M  "
+    s = "taskset -c 6,36,38 perf stat -M  "
     s += args[6]
     
     s += " /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py"

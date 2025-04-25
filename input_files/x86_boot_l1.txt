@@ -1,0 +1,10 @@
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit TopdownL1
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit TopdownL1
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit TopdownL1
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit TopdownL1
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit TopdownL1
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit TopdownL1
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit TopdownL1
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit TopdownL1
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit TopdownL1
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit TopdownL1
