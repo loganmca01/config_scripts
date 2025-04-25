@@ -1,0 +1,65 @@
+taskset -c 6,36,38 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu TIMING --mem 1GiB --cache 32KiB:256KiB --cores 1 --workload boot-exit &> /home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1/2025-04-24-12-19-54
+/home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1
+True
+success
+
+success
+
+taskset -c 6,36,38 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu TIMING --mem 1GiB --cache 32KiB:256KiB --cores 1 --workload boot-exit &> /home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1/2025-04-24-13-15-20
+/home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1
+success
+
+success
+
+taskset -c 6,36,38 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu TIMING --mem 1GiB --cache 32KiB:256KiB --cores 1 --workload boot-exit &> /home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1/2025-04-24-14-10-33
+/home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1
+success
+
+success
+
+taskset -c 6,36,38 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu TIMING --mem 1GiB --cache 32KiB:256KiB --cores 1 --workload boot-exit &> /home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1/2025-04-24-15-05-59
+/home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1
+success
+
+success
+
+taskset -c 6,36,38 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu TIMING --mem 1GiB --cache 32KiB:256KiB --cores 1 --workload boot-exit &> /home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1/2025-04-24-16-01-25
+/home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1
+success
+
+success
+
+taskset -c 6,36,38 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu TIMING --mem 1GiB --cache 32KiB:256KiB --cores 1 --workload boot-exit &> /home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1/2025-04-24-16-56-51
+/home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1
+success
+
+success
+
+taskset -c 6,36,38 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu TIMING --mem 1GiB --cache 32KiB:256KiB --cores 1 --workload boot-exit &> /home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1/2025-04-24-17-53-04
+/home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1
+success
+
+success
+
+taskset -c 6,36,38 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu TIMING --mem 1GiB --cache 32KiB:256KiB --cores 1 --workload boot-exit &> /home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1/2025-04-24-18-49-16
+/home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1
+success
+
+success
+
+taskset -c 6,36,38 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu TIMING --mem 1GiB --cache 32KiB:256KiB --cores 1 --workload boot-exit &> /home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1/2025-04-24-19-44-37
+/home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1
+success
+
+success
+
+taskset -c 6,36,38 perf stat -M  TopdownL1 /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu TIMING --mem 1GiB --cache 32KiB:256KiB --cores 1 --workload boot-exit &> /home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1/2025-04-24-20-40-01
+/home/mcallisl/config_scripts/output_files/X86-TIMING-1GiB-32KiB:256KiB-1-boot-exit-TopdownL1
+success
+
+success
+
+Traceback (most recent call last):
+  File "/home/mcallisl/config_scripts/./run_experiments.py", line 21, in <module>
+    s += args[6]
+IndexError: list index out of range
