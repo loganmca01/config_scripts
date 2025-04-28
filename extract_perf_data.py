@@ -19,7 +19,7 @@ def process_directory(directory):
     all_metrics = {}
     all_keys = set()
 
-    for filename in os.listdir(directory):
+    for filename in sorted(os.listdir(directory)):
         full_path = os.path.join(directory, filename)
         if os.path.isfile(full_path):
             metrics = extract_metrics_from_file(full_path)
