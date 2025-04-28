@@ -15,6 +15,7 @@ from gem5.components.boards.riscv_board import RiscvBoard
 from gem5.components.memory import DualChannelDDR4_2400
 from gem5.components.processors.cpu_types import CPUTypes
 from gem5.components.processors.simple_processor import SimpleProcessor
+from gem5.components.processors.simple_switchable_processor import SimpleSwitchableProcessor
 from gem5.components.cachehierarchies.ruby.mesi_two_level_cache_hierarchy import MESITwoLevelCacheHierarchy
 from gem5.components.cachehierarchies.ruby.mesi_three_level_cache_hierarchy import MESIThreeLevelCacheHierarchy
 from gem5.isas import ISA
@@ -117,14 +118,15 @@ else:
 # Note: X86 board only supports 3 GiB of main memory.
 memory = DualChannelDDR4_2400(size=args.mem)
 
-processor = SimpleProcessor(
-    cpu_type=CPUTypes[args.cpu],
-    isa=ISA[args.isa],
-    num_cores=args.cores,
-)
 
 if (args.workload == "boot-exit"):
     print("test1")
+    processor = SimpleProcessor(
+        cpu_type=CPUTypes[args.cpu],
+        isa=ISA[args.isa],
+        num_cores=args.cores,
+    )
+
     if (args.isa == "X86"):
         board = X86Board(
             clk_freq="3GHz",
@@ -243,10 +245,19 @@ if (args.workload == "boot-exit"):
     )
 else:
     print("test2")
+
+    processor = SimpleSwitchableProcessor(
+        starting_core_type=CPUTypes.KVM,
+        switch_core_type=CPUTypes[args.cpu],
+        isa=ISA[args.isa],
+        num_cores=args.cores,
+    )
+
+
     command = (
         f"cd /home/gem5/parsec-benchmark;"
         + "source env.sh;"
-        + f"parsecmgmt -a run -p {args.benchmark} -c gcc-hooks -i simsmall         -n {args.cores};"
+        + f"parsecmgmt -a run -p {args.workload} -c gcc-hooks -i simmedium         -n {args.cores};"
         + "sleep 5;"
         + "m5 exit;"
     )
@@ -265,10 +276,37 @@ else:
     )
     def handle_workbegin():
         print("Done booting Linux")
+        processor.switch()
+        print(time.strftime("%Y-%m-%d-%H-%M-%S"))
+        print("ps: ")
+        s = "ps -o pid,psr,comm -p " + str(os.getpid())
+        result = subprocess.run(s, shell=True, capture_output=True, text=True)
+
+        if result.returncode == 0:
+            print("success")
+            print(result.stdout)
+        else:
+            print("error executing command")
+            print(result.stderr)
+            exit(1)
         yield False
 
     def handle_workend():
-        print("end of benchmark")
+        print("end of benchmark, stat dump")
+        m5.stats.dump()
+        print()
+        print(time.strftime("%Y-%m-%d-%H-%M-%S"))
+        print("ps: ")
+        s = "ps -o pid,psr,comm -p " + str(os.getpid())
+        result = subprocess.run(s, shell=True, capture_output=True, text=True)
+
+        if result.returncode == 0:
+            print("success")
+            print(result.stdout)
+        else:
+            print("error executing command")
+            print(result.stderr)
+            exit(1)
         yield True
 
     simulator = Simulator(

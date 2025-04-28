@@ -1,0 +1,95 @@
+Global frequency set at 1000000000000 ticks per second
+warn: board.workload.acpi_description_table_pointer.rsdt adopting orphan SimObject param 'entries'
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (16384 Mbytes) does not match the address range assigned (1024 Mbytes)
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (16384 Mbytes) does not match the address range assigned (1024 Mbytes)
+src/sim/kernel_workload.cc:46: info: kernel located at: /home/mcallisl/.cache/gem5/x86-linux-kernel-4.19.83
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+      0: board.pc.south_bridge.cmos.rtc: Real-time clock set to Sun Jan  1 00:00:00 2012
+src/dev/serial/terminal.cc:174: warn: Sockets disabled, not accepting terminal connections
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+src/cpu/minor/execute.cc:166: warn: No functional unit for OpClass SimdUnitStrideSegmentedLoad
+src/cpu/minor/execute.cc:166: warn: No functional unit for OpClass SimdUnitStrideSegmentedStore
+src/dev/intel_8254_timer.cc:128: warn: Reading current count from inactive timer.
+src/base/remote_gdb.cc:418: warn: Sockets disabled, not accepting gdb connections
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.1.0.2
+gem5 compiled Apr  8 2025 17:46:57
+gem5 started Apr 24 2025 22:14:32
+gem5 executing on turing301, pid 184968
+command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu MINOR --mem 2GiB --cache 32KiB:256KiB --cores 1 --workload blackscholes
+
+info: Standard input is not a terminal, disabling listeners.
+test2
+info: Using default config
+Resource 'x86-linux-kernel-4.19.83' was not found locally. Downloading to '/home/mcallisl/.cache/gem5/x86-linux-kernel-4.19.83'...
+Finished downloading resource 'x86-linux-kernel-4.19.83'.
+Resource 'x86-parsec' was not found locally. Downloading to '/home/mcallisl/.cache/gem5/x86-parsec.gz'...
+Finished downloading resource 'x86-parsec'.
+Decompressing resource 'x86-parsec' ('/home/mcallisl/.cache/gem5/x86-parsec.gz')...
+Finished decompressing resource 'x86-parsec'.
+src/sim/simulate.cc:199: info: Entering event queue @ 0.  Starting simulation...
+src/mem/ruby/system/Sequencer.cc:704: warn: Replacement policy updates recently became the responsibility of SLICC state machines. Make sure to setMRU() near callbacks in .sm files!
+src/arch/generic/debugfaults.hh:128: panic: Invalid microop!
+Memory Usage: 2941920 KBytes
+Program aborted at tick 8907840576
+--- BEGIN LIBC BACKTRACE ---
+/home/mcallisl/gem5/build/ALL/gem5.opt(_ZN4gem515print_backtraceEv+0x15)[0x4de3ac5]
+/home/mcallisl/gem5/build/ALL/gem5.opt(_ZN4gem512abortHandlerEi+0x39)[0x4e048e9]
+/lib64/libc.so.6(+0x3e730)[0x7fb70483e730]
+/lib64/libc.so.6(+0x8ba6c)[0x7fb70488ba6c]
+/lib64/libc.so.6(raise+0x16)[0x7fb70483e686]
+/lib64/libc.so.6(abort+0xd3)[0x7fb704828833]
+/home/mcallisl/gem5/build/ALL/gem5.opt[0x1bd190f]
+/home/mcallisl/gem5/build/ALL/gem5.opt(_ZN4gem510GenericISA12M5PanicFault9debugFuncEv+0x96)[0x31e95b6]
+/home/mcallisl/gem5/build/ALL/gem5.opt(_ZN4gem510GenericISA12M5DebugFault6invokeEPNS_13ThreadContextERKNS_14RefCountingPtrINS_10StaticInstEEE+0x1aa)[0x31e990a]
+/home/mcallisl/gem5/build/ALL/gem5.opt(_ZN4gem55minor7Execute10commitInstENS_14RefCountingPtrINS0_12MinorDynInstEEEbRNS0_10BranchDataERSt10shared_ptrINS_9FaultBaseEERbSB_+0x8c9)[0x3a1ff69]
+/home/mcallisl/gem5/build/ALL/gem5.opt(_ZN4gem55minor7Execute6commitEsbbRNS0_10BranchDataE+0x174b)[0x3a24e7b]
+/home/mcallisl/gem5/build/ALL/gem5.opt(_ZN4gem55minor7Execute8evaluateEv+0xbeb)[0x3a264bb]
+/home/mcallisl/gem5/build/ALL/gem5.opt(_ZN4gem55minor8Pipeline8evaluateEv+0x1d2)[0x3a64ac2]
+/home/mcallisl/gem5/build/ALL/gem5.opt[0x4e182c0]
+/home/mcallisl/gem5/build/ALL/gem5.opt(_ZN4gem510EventQueue10serviceOneEv+0xaa)[0x4df5e9a]
+/home/mcallisl/gem5/build/ALL/gem5.opt(_ZN4gem59doSimLoopEPNS_10EventQueueE+0x58)[0x4e19e68]
+/home/mcallisl/gem5/build/ALL/gem5.opt(_ZN4gem58simulateEm+0x262)[0x4e1a402]
+/home/mcallisl/gem5/build/ALL/gem5.opt[0x4d7149e]
+/home/mcallisl/gem5/build/ALL/gem5.opt[0x1de7fa8]
+/lib64/libpython3.9.so.1.0(+0x151962)[0x7fb705751962]
+/lib64/libpython3.9.so.1.0(PyObject_Call+0x16b)[0x7fb70574fcbb]
+/lib64/libpython3.9.so.1.0(_PyEval_EvalFrameDefault+0x6860)[0x7fb705735f00]
+/lib64/libpython3.9.so.1.0(+0x12e699)[0x7fb70572e699]
+/lib64/libpython3.9.so.1.0(_PyFunction_Vectorcall+0xe5)[0x7fb705740da5]
+/lib64/libpython3.9.so.1.0(_PyEval_EvalFrameDefault+0x57fa)[0x7fb705734e9a]
+/lib64/libpython3.9.so.1.0(+0x12e699)[0x7fb70572e699]
+/lib64/libpython3.9.so.1.0(_PyFunction_Vectorcall+0xe5)[0x7fb705740da5]
+/lib64/libpython3.9.so.1.0(_PyEval_EvalFrameDefault+0x75d)[0x7fb70572fdfd]
+/lib64/libpython3.9.so.1.0(+0x12e699)[0x7fb70572e699]
+/lib64/libpython3.9.so.1.0(_PyEval_EvalCodeWithName+0x55)[0x7fb70572e305]
+/lib64/libpython3.9.so.1.0(PyEval_EvalCode+0x27)[0x7fb7057e2627]
+/lib64/libpython3.9.so.1.0(+0x1e7293)[0x7fb7057e7293]
+--- END LIBC BACKTRACE ---
+For more info on how to address this issue, please visit https://www.gem5.org/documentation/general_docs/common-errors/ 
+
+/home/mcallisl/gem5/build/ALL/gem5.opt: Aborted
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu MINOR --mem 2GiB --cache 32KiB:256KiB --cores 1 --workload blackscholes':
+
+    19,894,039,997      CPU_CLK_UNHALTED.REF_XCLK        #     27.2 %  tma_frontend_bound     
+                                                  #      8.7 %  tma_bad_speculation    
+                                                  #     32.0 %  tma_retiring           
+                                                  #     32.0 %  tma_backend_bound        (62.53%)
+    34,389,619,017      IDQ.MS_UOPS                                                             (62.53%)
+   697,927,461,420      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.02%)
+    22,857,732,210      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
+    19,863,420,407      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (49.98%)
+   641,676,291,550      CPU_CLK_UNHALTED.THREAD                                                 (62.49%)
+   821,373,312,856      UOPS_RETIRED.RETIRE_SLOTS                                               (62.47%)
+   999,649,071,823      UOPS_ISSUED.ANY                                                         (62.48%)
+
+    2631.968367501 seconds time elapsed
+
+     168.898692000 seconds user
+      32.853056000 seconds sys
+
+

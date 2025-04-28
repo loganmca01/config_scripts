@@ -3,24 +3,32 @@ import time
 import subprocess
 import os
 
-if (len(sys.argv) != 2):
-    print("error: need one file name as command line arg")
-    exit(1)
-    
 with open(sys.argv[1], "r") as f:
     contents = f.read()
     f.close()
+
+num_par = int(sys.argv[2])
 
 tests = contents.split("\n")
 
 if (tests[len(tests) - 1] == ""):
     tests = tests[:-1]
 
+s = ""
+current_par = 0
+
+num_trials = len(tests)
+
+current_trial = 0
+
 for test in tests:
 
+    current_trial += 1
+    current_par += 1
+    
     args = test.split(" ")
     
-    s = "taskset -c 0-9,11-29,31-39 perf stat -M  "
+    s += "taskset -c 0-9,11-29,31-39 perf stat -M  "
     s += args[6]
     
     s += " /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py"
@@ -33,6 +41,9 @@ for test in tests:
     s += " --workload " + args[5]
     
     timestr = time.strftime("%Y-%m-%d-%H-%M-%S")
+
+    time.sleep(2) # make sure experiments don't have same timestamp
+    
     s += " &> "
     d = "/home/mcallisl/config_scripts/output_files/"
     for tmp in args:
@@ -41,11 +52,33 @@ for test in tests:
     d = d[:-1]
     s += d + "/" + timestr
 
+    s += " & "
+
+    print()
     print(s)
     print(d)
+    print()
     if not os.path.exists(d):
         os.makedirs(d)
         print(os.path.exists(d))
+
+    print(current_par)
+    print(num_par)
+    print(current_par == num_par)
+    print(current_trial)
+    print(num_trials)
+    if (current_par != num_par and current_trial != num_trials):
+        print("test continue")
+        continue
+        
+    s += "wait"
+    current_par = 0
+
+    print()
+    print("test finish")
+    print()
+    print(s)
+    print()
     
     result = subprocess.run(s, shell=True, capture_output=True, text=True)
     
@@ -69,5 +102,6 @@ for test in tests:
         print("error executing cleanup")
         print(cleanup.stderr)
         exit(1)
+
     
-    
+    s = ""

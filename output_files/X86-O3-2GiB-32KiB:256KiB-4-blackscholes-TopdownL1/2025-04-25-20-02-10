@@ -1,0 +1,37 @@
+NameError: name 'SimpleSwitchableProcessor' is not defined
+
+At:
+  /home/mcallisl/config_scripts/run_script.py(248): <module>
+  src/python/m5/main.py(675): main
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.1.0.2
+gem5 compiled Apr  8 2025 17:46:57
+gem5 started Apr 25 2025 20:02:12
+gem5 executing on turing301, pid 228849
+command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes
+
+info: Standard input is not a terminal, disabling listeners.
+test2
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes':
+
+        48,851,349      CPU_CLK_UNHALTED.REF_XCLK        #     27.4 %  tma_frontend_bound     
+                                                  #     10.3 %  tma_bad_speculation    
+                                                  #     29.8 %  tma_retiring           
+                                                  #     32.5 %  tma_backend_bound        (62.34%)
+        46,423,914      IDQ.MS_UOPS                                                             (62.76%)
+     1,745,593,333      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.58%)
+        64,114,899      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.32%)
+        48,825,734      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.18%)
+     1,593,574,265      CPU_CLK_UNHALTED.THREAD                                                 (62.34%)
+     1,899,157,807      UOPS_RETIRED.RETIRE_SLOTS                                               (62.03%)
+     2,428,880,832      UOPS_ISSUED.ANY                                                         (61.78%)
+
+       1.868294223 seconds time elapsed
+
+       0.427014000 seconds user
+       0.066692000 seconds sys
+
+

@@ -2,6 +2,22 @@ import sys
 import time
 import subprocess
 import os
+import argparse
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument(
+    "--par",
+    type=int,
+    required=False,
+    default=1,
+)
+
+args = parser.parse_args()
+
+num_parallel = args.par
+
+
 
 if (len(sys.argv) != 2):
     print("error: need one file name as command line arg")
@@ -13,11 +29,8 @@ with open(sys.argv[1], "r") as f:
 
 tests = contents.split("\n")
 
-if (tests[len(tests) - 1] == ""):
-    tests = tests[:-1]
-
 for test in tests:
-
+    
     args = test.split(" ")
     
     s = "taskset -c 0-9,11-29,31-39 perf stat -M  "
