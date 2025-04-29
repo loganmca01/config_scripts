@@ -383,3 +383,37 @@ build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+end of benchmark, stat dump
+
+2025-04-29-13-00-31
+ps: 
+success
+    PID PSR COMMAND
+ 237907  20 gem5.opt
+
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes':
+
+   669,554,535,778      CPU_CLK_UNHALTED.REF_XCLK        #     46.7 %  tma_frontend_bound     
+                                                  #      6.5 %  tma_bad_speculation    
+                                                  #     27.6 %  tma_retiring           
+                                                  #     19.2 %  tma_backend_bound        (62.48%)
+ 1,864,059,245,212      IDQ.MS_UOPS                                                             (62.48%)
+39,670,082,996,754      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
+   499,096,836,612      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
+   665,636,655,761      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.00%)
+21,304,446,411,092      CPU_CLK_UNHALTED.THREAD                                                 (62.48%)
+23,474,340,269,900      UOPS_RETIRED.RETIRE_SLOTS                                               (62.48%)
+27,977,295,039,494      UOPS_ISSUED.ANY                                                         (62.48%)
+
+    6948.440072460 seconds time elapsed
+
+    6708.696512000 seconds user
+      22.897600000 seconds sys
+
+

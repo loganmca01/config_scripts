@@ -378,3 +378,40 @@ build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+end of benchmark, stat dump
+
+2025-04-29-13-00-38
+ps: 
+success
+    PID PSR COMMAND
+ 237905  18 gem5.opt
+
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes':
+
+   667,116,587,184      CPU_CLK_UNHALTED.REF_XCLK        #     44.8 %  tma_frontend_bound     
+                                                  #      6.4 %  tma_bad_speculation    
+                                                  #     25.9 %  tma_retiring           
+                                                  #     22.9 %  tma_backend_bound        (62.48%)
+ 1,920,655,258,614      IDQ.MS_UOPS                                                             (62.48%)
+40,598,640,363,132      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
+   515,023,141,382      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
+   666,665,666,762      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.00%)
+22,647,786,988,684      CPU_CLK_UNHALTED.THREAD                                                 (62.48%)
+23,427,722,030,521      UOPS_RETIRED.RETIRE_SLOTS                                               (62.48%)
+28,236,395,371,524      UOPS_ISSUED.ANY                                                         (62.48%)
+
+    6955.883909858 seconds time elapsed
+
+    6634.553249000 seconds user
+      16.817098000 seconds sys
+
+

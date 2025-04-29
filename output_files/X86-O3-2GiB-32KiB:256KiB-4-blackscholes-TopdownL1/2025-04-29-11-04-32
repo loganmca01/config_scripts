@@ -385,3 +385,36 @@ build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+end of benchmark, stat dump
+
+2025-04-29-13-01-56
+ps: 
+success
+    PID PSR COMMAND
+ 237906  16 gem5.opt
+
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload blackscholes':
+
+   664,659,774,722      CPU_CLK_UNHALTED.REF_XCLK        #     45.6 %  tma_frontend_bound     
+                                                  #      6.5 %  tma_bad_speculation    
+                                                  #     26.0 %  tma_retiring           
+                                                  #     21.8 %  tma_backend_bound        (62.48%)
+ 1,929,848,450,549      IDQ.MS_UOPS                                                             (62.48%)
+41,144,589,933,240      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
+   526,556,296,766      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
+   664,210,915,386      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.00%)
+22,563,810,735,519      CPU_CLK_UNHALTED.THREAD                                                 (62.48%)
+23,479,487,761,313      UOPS_RETIRED.RETIRE_SLOTS                                               (62.48%)
+28,314,736,573,424      UOPS_ISSUED.ANY                                                         (62.48%)
+
+    7032.995085575 seconds time elapsed
+
+    6611.417306000 seconds user
+      16.469015000 seconds sys
+
+
