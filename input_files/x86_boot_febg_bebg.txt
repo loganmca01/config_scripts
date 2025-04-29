@@ -1,0 +1,10 @@
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit tma_frontend_bound_group
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit tma_backend_bound_group
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit tma_frontend_bound_group
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit tma_backend_bound_group
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit tma_frontend_bound_group
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit tma_backend_bound_group
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit tma_frontend_bound_group
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit tma_backend_bound_group
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit tma_frontend_bound_group
+X86 TIMING 1GiB 32KiB:256KiB 1 boot-exit tma_backend_bound_group
