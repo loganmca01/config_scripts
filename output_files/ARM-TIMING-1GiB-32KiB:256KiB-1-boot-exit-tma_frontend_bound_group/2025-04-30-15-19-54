@@ -17,8 +17,8 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 24.1.0.2
 gem5 compiled Apr  8 2025 17:46:57
-gem5 started Apr 30 2025 13:58:59
-gem5 executing on turing301, pid 240936
+gem5 started Apr 30 2025 15:19:59
+gem5 executing on turing301, pid 241259
 command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa ARM --cpu TIMING --mem 1GiB --cache 32KiB:256KiB --cores 1 --workload boot-exit
 
 info: Standard input is not a terminal, disabling listeners.
@@ -49,43 +49,43 @@ src/dev/arm/rv_ctrl.cc:122: warn: Tried to read RealView I/O at offset 0x48 that
 src/arch/arm/insts/pseudo.cc:174: warn: 	instruction 'bti' unimplemented
 src/arch/arm/insts/pseudo.cc:174: warn: 	instruction 'bti' unimplemented
 first exit event: kernel booted
-2025-04-30-14-12-16
+2025-04-30-15-33-23
 ps: 
 success
     PID PSR COMMAND
- 240936  35 gem5.opt
+ 241259  32 gem5.opt
 
 success
 Name:	gem5.opt
 Umask:	0022
 State:	S (sleeping)
-Tgid:	240936
+Tgid:	241259
 Ngid:	0
-Pid:	240936
-PPid:	240935
+Pid:	241259
+PPid:	241257
 TracerPid:	0
 Uid:	1003	1003	1003	1003
 Gid:	100	100	100	100
 FDSize:	64
 Groups:	10 100 979 
-NStgid:	240936
-NSpid:	240936
+NStgid:	241259
+NSpid:	241259
 NSpgid:	240242
 NSsid:	240120
 VmPeak:	 2293016 kB
 VmSize:	 2293016 kB
 VmLck:	       0 kB
 VmPin:	       0 kB
-VmHWM:	  583056 kB
-VmRSS:	  583056 kB
-RssAnon:	  512656 kB
-RssFile:	   70400 kB
+VmHWM:	  582728 kB
+VmRSS:	  582728 kB
+RssAnon:	  512648 kB
+RssFile:	   70080 kB
 RssShmem:	       0 kB
 VmData:	 1787496 kB
 VmStk:	     132 kB
 VmExe:	   61316 kB
 VmLib:	   13356 kB
-VmPTE:	    1296 kB
+VmPTE:	    1300 kB
 VmSwap:	       0 kB
 HugetlbPages:	       0 kB
 CoreDumping:	0
@@ -112,112 +112,44 @@ Cpus_allowed:	ff,800ff800
 Cpus_allowed_list:	11-19,31-39
 Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000003
 Mems_allowed_list:	0-1
-voluntary_ctxt_switches:	1481
-nonvoluntary_ctxt_switches:	931
+voluntary_ctxt_switches:	1548
+nonvoluntary_ctxt_switches:	1083
 
 src/sim/simulate.cc:199: info: Entering event queue @ 439310021563.  Starting simulation...
 second exit event: in after boot
-2025-04-30-14-32-30
+2025-04-30-15-54-08
 ps: 
 success
     PID PSR COMMAND
- 240936  35 gem5.opt
+ 241259  32 gem5.opt
 
 success
 Name:	gem5.opt
 Umask:	0022
 State:	S (sleeping)
-Tgid:	240936
+Tgid:	241259
 Ngid:	0
-Pid:	240936
-PPid:	240935
+Pid:	241259
+PPid:	241257
 TracerPid:	0
 Uid:	1003	1003	1003	1003
 Gid:	100	100	100	100
 FDSize:	64
 Groups:	10 100 979 
-NStgid:	240936
-NSpid:	240936
+NStgid:	241259
+NSpid:	241259
 NSpgid:	240242
 NSsid:	240120
 VmPeak:	 2338400 kB
 VmSize:	 2338400 kB
 VmLck:	       0 kB
 VmPin:	       0 kB
-VmHWM:	  640160 kB
-VmRSS:	  640160 kB
-RssAnon:	  569440 kB
-RssFile:	   70720 kB
+VmHWM:	  637272 kB
+VmRSS:	  637272 kB
+RssAnon:	  566872 kB
+RssFile:	   70400 kB
 RssShmem:	       0 kB
 VmData:	 1832880 kB
-VmStk:	     132 kB
-VmExe:	   61316 kB
-VmLib:	   13356 kB
-VmPTE:	    1404 kB
-VmSwap:	       0 kB
-HugetlbPages:	       0 kB
-CoreDumping:	0
-THP_enabled:	1
-untag_mask:	0xffffffffffffffff
-Threads:	1
-SigQ:	0/512669
-SigPnd:	0000000000000000
-ShdPnd:	0000000000000000
-SigBlk:	0000000008000000
-SigIgn:	0000000001001085
-SigCgt:	0000000010000e22
-CapInh:	0000000000000000
-CapPrm:	0000000000000000
-CapEff:	0000000000000000
-CapBnd:	000001ffffffffff
-CapAmb:	0000000000000000
-NoNewPrivs:	0
-Seccomp:	0
-Seccomp_filters:	0
-Speculation_Store_Bypass:	vulnerable
-SpeculationIndirectBranch:	always enabled
-Cpus_allowed:	ff,800ff800
-Cpus_allowed_list:	11-19,31-39
-Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000003
-Mems_allowed_list:	0-1
-voluntary_ctxt_switches:	1521
-nonvoluntary_ctxt_switches:	1956
-
-src/sim/simulate.cc:199: info: Entering event queue @ 792643857706.  Starting simulation...
-third exit event: after run script
-2025-04-30-14-33-45
-ps: 
-success
-    PID PSR COMMAND
- 240936  35 gem5.opt
-
-success
-Name:	gem5.opt
-Umask:	0022
-State:	S (sleeping)
-Tgid:	240936
-Ngid:	0
-Pid:	240936
-PPid:	240935
-TracerPid:	0
-Uid:	1003	1003	1003	1003
-Gid:	100	100	100	100
-FDSize:	64
-Groups:	10 100 979 
-NStgid:	240936
-NSpid:	240936
-NSpgid:	240242
-NSsid:	240120
-VmPeak:	 2340448 kB
-VmSize:	 2340448 kB
-VmLck:	       0 kB
-VmPin:	       0 kB
-VmHWM:	  642080 kB
-VmRSS:	  642080 kB
-RssAnon:	  571360 kB
-RssFile:	   70720 kB
-RssShmem:	       0 kB
-VmData:	 1834928 kB
 VmStk:	     132 kB
 VmExe:	   61316 kB
 VmLib:	   13356 kB
@@ -248,22 +180,90 @@ Cpus_allowed:	ff,800ff800
 Cpus_allowed_list:	11-19,31-39
 Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000003
 Mems_allowed_list:	0-1
-voluntary_ctxt_switches:	1527
-nonvoluntary_ctxt_switches:	2029
+voluntary_ctxt_switches:	1579
+nonvoluntary_ctxt_switches:	2341
+
+src/sim/simulate.cc:199: info: Entering event queue @ 792643857706.  Starting simulation...
+third exit event: after run script
+2025-04-30-15-55-23
+ps: 
+success
+    PID PSR COMMAND
+ 241259  32 gem5.opt
+
+success
+Name:	gem5.opt
+Umask:	0022
+State:	S (sleeping)
+Tgid:	241259
+Ngid:	0
+Pid:	241259
+PPid:	241257
+TracerPid:	0
+Uid:	1003	1003	1003	1003
+Gid:	100	100	100	100
+FDSize:	64
+Groups:	10 100 979 
+NStgid:	241259
+NSpid:	241259
+NSpgid:	240242
+NSsid:	240120
+VmPeak:	 2340448 kB
+VmSize:	 2340448 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	  639832 kB
+VmRSS:	  639832 kB
+RssAnon:	  569432 kB
+RssFile:	   70400 kB
+RssShmem:	       0 kB
+VmData:	 1834928 kB
+VmStk:	     132 kB
+VmExe:	   61316 kB
+VmLib:	   13356 kB
+VmPTE:	    1412 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+THP_enabled:	1
+untag_mask:	0xffffffffffffffff
+Threads:	1
+SigQ:	0/512669
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000008000000
+SigIgn:	0000000001001085
+SigCgt:	0000000010000e22
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	000001ffffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Seccomp_filters:	0
+Speculation_Store_Bypass:	vulnerable
+SpeculationIndirectBranch:	always enabled
+Cpus_allowed:	ff,800ff800
+Cpus_allowed_list:	11-19,31-39
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000003
+Mems_allowed_list:	0-1
+voluntary_ctxt_switches:	1609
+nonvoluntary_ctxt_switches:	2437
 
 
  Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa ARM --cpu TIMING --mem 1GiB --cache 32KiB:256KiB --cores 1 --workload boot-exit':
 
-   204,863,378,176      CPU_CLK_UNHALTED.REF_XCLK        #     19.0 %  tma_fetch_bandwidth    
-                                                  #     25.5 %  tma_fetch_latency      
-12,381,587,727,262      IDQ_UOPS_NOT_DELIVERED.CORE                                           
-   204,856,238,405      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                      
- 6,963,152,541,093      CPU_CLK_UNHALTED.THREAD                                               
- 1,775,844,668,975      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                      
+   208,443,291,155      CPU_CLK_UNHALTED.REF_XCLK        #     18.3 %  tma_fetch_bandwidth    
+                                                  #     25.4 %  tma_fetch_latency      
+12,392,383,328,235      IDQ_UOPS_NOT_DELIVERED.CORE                                           
+   208,401,629,064      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                      
+ 7,085,307,848,431      CPU_CLK_UNHALTED.THREAD                                               
+ 1,799,692,576,444      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                      
 
-    2088.496748660 seconds time elapsed
+    2126.956170983 seconds time elapsed
 
-    2041.594002000 seconds user
-       1.673250000 seconds sys
+    2076.714417000 seconds user
+       1.708095000 seconds sys
 
 
