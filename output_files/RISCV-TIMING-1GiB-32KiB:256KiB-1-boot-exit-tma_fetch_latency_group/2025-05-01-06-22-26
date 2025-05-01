@@ -1,0 +1,284 @@
+Global frequency set at 1000000000000 ticks per second
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (16384 Mbytes) does not match the address range assigned (512 Mbytes)
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (16384 Mbytes) does not match the address range assigned (512 Mbytes)
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+      0: board.platform.rtc: Real-time clock set to Sun Jan  1 00:00:00 2012
+src/dev/serial/terminal.cc:174: warn: Sockets disabled, not accepting terminal connections
+src/arch/riscv/isa.cc:279: info: RVV enabled, VLEN = 256 bits, ELEN = 64 bits
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+src/base/remote_gdb.cc:418: warn: Sockets disabled, not accepting gdb connections
+src/arch/riscv/linux/fs_workload.cc:162: info: Loaded bootloader '/home/mcallisl/.cache/gem5/riscv-bootloader-opensbi-1.3.1' at 0x0
+src/arch/riscv/linux/fs_workload.cc:180: info: Loaded kernel '/home/mcallisl/.cache/gem5/riscv-linux-6.6.33-kernel' at 0x80200000
+src/arch/riscv/linux/fs_workload.cc:199: info: Loaded DTB 'm5out/device.dtb' at 0x87e00000
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.1.0.2
+gem5 compiled Apr  8 2025 17:46:57
+gem5 started May  1 2025 06:22:34
+gem5 executing on turing301, pid 243286
+command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa RISCV --cpu TIMING --mem 1GiB --cache 32KiB:256KiB --cores 1 --workload boot-exit
+
+info: Standard input is not a terminal, disabling listeners.
+test1
+info: Using default config
+src/sim/simulate.cc:199: info: Entering event queue @ 0.  Starting simulation...
+src/mem/ruby/system/Sequencer.cc:704: warn: Replacement policy updates recently became the responsibility of SLICC state machines. Make sure to setMRU() near callbacks in .sm files!
+src/arch/riscv/isa.cc:655: warn: Ignoring write to miscreg HPMCOUNTER03.
+src/arch/riscv/isa.cc:655: warn: Ignoring write to miscreg HPMCOUNTER03.
+src/mem/ruby/system/RubyPort.cc:264: warn: Cache maintenance operations are not supported in Ruby.
+src/dev/riscv/vio_mmio.cc:216: warn: Ignoring queue resize hint. Requested size: 16
+first exit event: kernel booted
+2025-05-01-06-39-14
+ps: 
+success
+    PID PSR COMMAND
+ 243286   6 gem5.opt
+
+success
+Name:	gem5.opt
+Umask:	0022
+State:	S (sleeping)
+Tgid:	243286
+Ngid:	0
+Pid:	243286
+PPid:	243284
+TracerPid:	0
+Uid:	1003	1003	1003	1003
+Gid:	100	100	100	100
+FDSize:	64
+Groups:	10 100 979 
+NStgid:	243286
+NSpid:	243286
+NSpgid:	241624
+NSsid:	241409
+VmPeak:	 1768492 kB
+VmSize:	 1768492 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	  489228 kB
+VmRSS:	  489228 kB
+RssAnon:	  436828 kB
+RssFile:	   52400 kB
+RssShmem:	       0 kB
+VmData:	 1425440 kB
+VmStk:	     132 kB
+VmExe:	   61316 kB
+VmLib:	   13356 kB
+VmPTE:	    1108 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+THP_enabled:	1
+untag_mask:	0xffffffffffffffff
+Threads:	1
+SigQ:	0/512669
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000008000000
+SigIgn:	0000000001001085
+SigCgt:	0000000010000e22
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	000001ffffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Seccomp_filters:	0
+Speculation_Store_Bypass:	vulnerable
+SpeculationIndirectBranch:	always enabled
+Cpus_allowed:	00,3fe003fe
+Cpus_allowed_list:	1-9,21-29
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000003
+Mems_allowed_list:	0-1
+voluntary_ctxt_switches:	1553
+nonvoluntary_ctxt_switches:	1190
+
+src/sim/simulate.cc:199: info: Entering event queue @ 372693859740.  Starting simulation...
+src/arch/riscv/isa.cc:974: warn: 475948276965: context 0: 10000 consecutive SC failures.
+second exit event: in after boot
+2025-05-01-07-02-13
+ps: 
+success
+    PID PSR COMMAND
+ 243286  26 gem5.opt
+
+success
+Name:	gem5.opt
+Umask:	0022
+State:	S (sleeping)
+Tgid:	243286
+Ngid:	0
+Pid:	243286
+PPid:	243284
+TracerPid:	0
+Uid:	1003	1003	1003	1003
+Gid:	100	100	100	100
+FDSize:	64
+Groups:	10 100 979 
+NStgid:	243286
+NSpid:	243286
+NSpgid:	241624
+NSsid:	241409
+VmPeak:	 1782828 kB
+VmSize:	 1782828 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	  513164 kB
+VmRSS:	  513164 kB
+RssAnon:	  460444 kB
+RssFile:	   52720 kB
+RssShmem:	       0 kB
+VmData:	 1439776 kB
+VmStk:	     132 kB
+VmExe:	   61316 kB
+VmLib:	   13356 kB
+VmPTE:	    1152 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+THP_enabled:	1
+untag_mask:	0xffffffffffffffff
+Threads:	1
+SigQ:	0/512669
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000008000000
+SigIgn:	0000000001001085
+SigCgt:	0000000010000e22
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	000001ffffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Seccomp_filters:	0
+Speculation_Store_Bypass:	vulnerable
+SpeculationIndirectBranch:	always enabled
+Cpus_allowed:	00,3fe003fe
+Cpus_allowed_list:	1-9,21-29
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000003
+Mems_allowed_list:	0-1
+voluntary_ctxt_switches:	1604
+nonvoluntary_ctxt_switches:	2235
+
+src/sim/simulate.cc:199: info: Entering event queue @ 822296171376.  Starting simulation...
+third exit event: after run script
+2025-05-01-07-04-19
+ps: 
+success
+    PID PSR COMMAND
+ 243286  26 gem5.opt
+
+success
+Name:	gem5.opt
+Umask:	0022
+State:	S (sleeping)
+Tgid:	243286
+Ngid:	0
+Pid:	243286
+PPid:	243284
+TracerPid:	0
+Uid:	1003	1003	1003	1003
+Gid:	100	100	100	100
+FDSize:	64
+Groups:	10 100 979 
+NStgid:	243286
+NSpid:	243286
+NSpgid:	241624
+NSsid:	241409
+VmPeak:	 1786924 kB
+VmSize:	 1786924 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	  520680 kB
+VmRSS:	  520680 kB
+RssAnon:	  467960 kB
+RssFile:	   52720 kB
+RssShmem:	       0 kB
+VmData:	 1443872 kB
+VmStk:	     132 kB
+VmExe:	   61316 kB
+VmLib:	   13356 kB
+VmPTE:	    1164 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+THP_enabled:	1
+untag_mask:	0xffffffffffffffff
+Threads:	1
+SigQ:	1/512669
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000008000000
+SigIgn:	0000000001001085
+SigCgt:	0000000010000e22
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	000001ffffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Seccomp_filters:	0
+Speculation_Store_Bypass:	vulnerable
+SpeculationIndirectBranch:	always enabled
+Cpus_allowed:	00,3fe003fe
+Cpus_allowed_list:	1-9,21-29
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000003
+Mems_allowed_list:	0-1
+voluntary_ctxt_switches:	1610
+nonvoluntary_ctxt_switches:	2388
+
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa RISCV --cpu TIMING --mem 1GiB --cache 32KiB:256KiB --cores 1 --workload boot-exit':
+
+   244,828,559,441      CPU_CLK_UNHALTED.REF_XCLK        #      9.3 %  tma_itlb_misses          (12.50%)
+14,195,354,699,027      IDQ_UOPS_NOT_DELIVERED.CORE                                             (12.50%)
+    10,714,677,753      cpu/ITLB_MISSES.WALK_DURATION,cmask=1/                                        (12.50%)
+   244,800,168,771      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (10.00%)
+    54,344,105,145      ITLB_MISSES.STLB_HIT                                                    (10.00%)
+ 8,316,598,794,730      CPU_CLK_UNHALTED.THREAD                                                 (12.50%)
+       260,691,311      ITLB_MISSES.WALK_COMPLETED                                              (12.50%)
+ 1,868,180,524,530      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (12.50%)
+   244,755,295,438      CPU_CLK_UNHALTED.REF_XCLK        #      5.5 %  tma_branch_resteers      (12.50%)
+14,190,480,700,134      IDQ_UOPS_NOT_DELIVERED.CORE                                             (12.50%)
+    22,334,318,818      BACLEARS.ANY                                                            (10.00%)
+    14,824,339,693      BR_MISP_RETIRED.ALL_BRANCHES                                            (10.00%)
+   244,598,542,941      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (10.00%)
+ 8,314,012,386,976      CPU_CLK_UNHALTED.THREAD                                                 (12.50%)
+ 1,868,002,014,365      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (12.50%)
+       908,243,481      MACHINE_CLEARS.COUNT                                                    (12.50%)
+   244,777,633,018      CPU_CLK_UNHALTED.REF_XCLK        #      1.4 %  tma_ms_switches          (12.50%)
+14,194,206,654,847      IDQ_UOPS_NOT_DELIVERED.CORE                                             (12.50%)
+   244,774,075,013      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (10.00%)
+ 8,319,988,951,264      CPU_CLK_UNHALTED.THREAD                                                 (12.50%)
+ 1,869,295,295,196      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (12.50%)
+    58,786,806,895      IDQ.MS_SWITCHES                                                         (12.50%)
+    73,667,811,493      ILD_STALL.LCP                    #      0.9 %  tma_lcp                  (12.50%)
+   244,812,374,151      CPU_CLK_UNHALTED.REF_XCLK                                               (12.50%)
+14,197,017,303,269      IDQ_UOPS_NOT_DELIVERED.CORE                                             (10.00%)
+   244,778,898,114      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (10.00%)
+ 8,319,973,461,196      CPU_CLK_UNHALTED.THREAD                                                 (12.50%)
+ 1,869,235,975,641      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (12.50%)
+   244,774,384,934      CPU_CLK_UNHALTED.REF_XCLK        #      9.4 %  tma_icache_misses        (12.50%)
+14,190,949,558,458      IDQ_UOPS_NOT_DELIVERED.CORE                                             (12.50%)
+   784,761,002,148      ICACHE.IFDATA_STALL                                                     (12.50%)
+   244,690,198,864      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (10.00%)
+ 8,317,736,186,569      CPU_CLK_UNHALTED.THREAD                                                 (12.50%)
+ 1,868,370,152,323      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (12.50%)
+   179,906,926,411      DSB2MITE_SWITCHES.PENALTY_CYCLES #      2.2 %  tma_dsb_switches         (12.50%)
+   244,778,834,353      CPU_CLK_UNHALTED.REF_XCLK                                               (12.50%)
+14,191,055,411,884      IDQ_UOPS_NOT_DELIVERED.CORE                                             (12.50%)
+   244,749,950,885      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (10.00%)
+ 8,319,525,273,575      CPU_CLK_UNHALTED.THREAD                                                 (12.50%)
+ 1,868,502,032,496      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (12.50%)
+
+    2508.000209169 seconds time elapsed
+
+    2439.823423000 seconds user
+       1.818701000 seconds sys
+
+
