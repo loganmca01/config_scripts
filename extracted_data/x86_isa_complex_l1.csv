@@ -1,0 +1,5 @@
+Metric,2025-05-01-14-28-50,2025-05-01-14-28-52
+tma_backend_bound,15.7,15.2
+tma_bad_speculation,4.2,4.2
+tma_frontend_bound,48.9,49.7
+tma_retiring,31.1,31.0
