@@ -39,7 +39,7 @@ cpu_choices = [
 workload_choices = [
     "boot-exit",
     "blackscholes",
-    "canneal",
+    "dedup",
     "fluidanimate",
 ]
 
@@ -257,7 +257,7 @@ else:
     command = (
         f"cd /home/gem5/parsec-benchmark;"
         + "source env.sh;"
-        + f"parsecmgmt -a run -p {args.workload} -c gcc-hooks -i simmedium         -n {args.cores};"
+        + f"parsecmgmt -a run -p {args.workload} -c gcc-hooks -i simsmall         -n {args.cores};"
         + "sleep 5;"
         + "m5 exit;"
     )
