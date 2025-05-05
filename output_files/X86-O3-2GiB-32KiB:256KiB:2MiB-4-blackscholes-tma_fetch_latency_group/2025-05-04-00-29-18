@@ -19,9 +19,9 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 24.1.0.2
 gem5 compiled Apr  8 2025 17:46:57
-gem5 started May  2 2025 20:25:08
-gem5 executing on turing301, pid 248992
-command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload dedup
+gem5 started May  4 2025 00:29:22
+gem5 executing on turing301, pid 251868
+command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB:2MiB --cores 4 --workload blackscholes
 
 info: Standard input is not a terminal, disabling listeners.
 test2
@@ -366,13 +366,13 @@ src/dev/x86/i8042.cc:290: warn: Write to unknown i8042 (keyboard controller) com
 src/sim/power_state.cc:105: warn: PowerState: Already in the requested power state, request ignored
 Done booting Linux
 switching cpus
-2025-05-02-20-27-08
+2025-05-04-00-31-26
 ps: 
 success
     PID PSR COMMAND
- 248992  12 gem5.opt
+ 251868  25 gem5.opt
 
-src/sim/simulate.cc:199: info: Entering event queue @ 17870843636632.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 18473454043678.  Starting simulation...
 src/mem/ruby/system/Sequencer.cc:704: warn: Replacement policy updates recently became the responsibility of SLICC state machines. Make sure to setMRU() near callbacks in .sm files!
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
@@ -380,33 +380,67 @@ build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
-build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
-build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
-build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
-build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
-src/arch/generic/debugfaults.hh:145: warn: MOVNTDQ: Ignoring non-temporal hint, modeling as cacheable!
-build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
-/home/mcallisl/gem5/build/ALL/gem5.opt: Terminated
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+end of benchmark, stat dump
 
- Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload dedup':
+2025-05-04-00-46-11
+ps: 
+success
+    PID PSR COMMAND
+ 251868  25 gem5.opt
 
-   712,564,614,754      CPU_CLK_UNHALTED.REF_XCLK        #     47.3 %  tma_frontend_bound     
-                                                  #      6.1 %  tma_bad_speculation    
-                                                  #     25.1 %  tma_retiring           
-                                                  #     21.5 %  tma_backend_bound        (62.48%)
- 2,096,795,491,476      IDQ.MS_UOPS                                                             (62.48%)
-45,776,340,540,384      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
-   549,259,235,292      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
-   711,729,729,139      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.00%)
-24,200,092,706,252      CPU_CLK_UNHALTED.THREAD                                                 (62.48%)
-24,326,906,003,543      UOPS_RETIRED.RETIRE_SLOTS                                               (62.48%)
-29,096,805,678,211      UOPS_ISSUED.ANY                                                         (62.48%)
 
-    7221.794218805 seconds time elapsed
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB:2MiB --cores 4 --workload blackscholes':
 
-    7085.193243000 seconds user
-      20.239145000 seconds sys
+    95,142,188,918      CPU_CLK_UNHALTED.REF_XCLK        #      5.3 %  tma_itlb_misses          (12.47%)
+ 5,105,095,097,989      IDQ_UOPS_NOT_DELIVERED.CORE                                             (12.47%)
+    26,786,012,149      cpu/ITLB_MISSES.WALK_DURATION,cmask=1/                                        (12.47%)
+    95,059,662,418      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (10.01%)
+    10,036,010,022      ITLB_MISSES.STLB_HIT                                                    (10.01%)
+ 3,228,923,946,355      CPU_CLK_UNHALTED.THREAD                                                 (12.48%)
+       464,589,551      ITLB_MISSES.WALK_COMPLETED                                              (12.47%)
+   970,379,850,004      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (12.47%)
+    95,130,671,391      CPU_CLK_UNHALTED.REF_XCLK        #     10.7 %  tma_branch_resteers      (12.47%)
+ 5,104,581,690,766      IDQ_UOPS_NOT_DELIVERED.CORE                                             (12.47%)
+    17,848,540,689      BACLEARS.ANY                                                            (10.00%)
+    10,362,282,403      BR_MISP_RETIRED.ALL_BRANCHES                                            (10.00%)
+    95,056,958,736      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (10.00%)
+ 3,230,104,854,189      CPU_CLK_UNHALTED.THREAD                                                 (12.47%)
+   971,178,522,205      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (12.47%)
+       641,390,491      MACHINE_CLEARS.COUNT                                                    (12.47%)
+    95,111,068,629      CPU_CLK_UNHALTED.REF_XCLK        #      1.2 %  tma_ms_switches          (12.47%)
+ 5,104,231,243,203      IDQ_UOPS_NOT_DELIVERED.CORE                                             (12.47%)
+    95,021,686,803      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (10.00%)
+ 3,228,462,477,554      CPU_CLK_UNHALTED.THREAD                                                 (12.47%)
+   971,348,648,293      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (12.47%)
+    20,169,259,805      IDQ.MS_SWITCHES                                                         (12.47%)
+     4,049,136,241      ILD_STALL.LCP                    #      0.1 %  tma_lcp                  (12.47%)
+    95,130,586,610      CPU_CLK_UNHALTED.REF_XCLK                                               (12.47%)
+ 5,098,443,790,671      IDQ_UOPS_NOT_DELIVERED.CORE                                             (10.00%)
+    94,958,538,428      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (10.00%)
+ 3,226,724,948,804      CPU_CLK_UNHALTED.THREAD                                                 (12.47%)
+   970,268,231,530      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (12.47%)
+    95,103,146,005      CPU_CLK_UNHALTED.REF_XCLK        #     16.7 %  tma_icache_misses        (12.47%)
+ 5,104,987,181,457      IDQ_UOPS_NOT_DELIVERED.CORE                                             (12.47%)
+   540,179,671,195      ICACHE.IFDATA_STALL                                                     (12.47%)
+    95,053,915,783      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (10.00%)
+ 3,229,551,644,372      CPU_CLK_UNHALTED.THREAD                                                 (12.47%)
+   971,217,782,837      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (12.46%)
+    66,522,874,072      DSB2MITE_SWITCHES.PENALTY_CYCLES #      2.1 %  tma_dsb_switches         (12.47%)
+    95,139,833,500      CPU_CLK_UNHALTED.REF_XCLK                                               (12.47%)
+ 5,107,881,759,686      IDQ_UOPS_NOT_DELIVERED.CORE                                             (12.47%)
+    95,068,573,363      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (10.00%)
+ 3,230,075,463,502      CPU_CLK_UNHALTED.THREAD                                                 (12.47%)
+   970,861,705,651      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (12.47%)
+
+    1009.281521211 seconds time elapsed
+
+     936.107019000 seconds user
+      17.484852000 seconds sys
 
 

@@ -23,7 +23,8 @@ for test in tests:
     current_trial += 1
     
     args = test.split(" ")
-
+    print(args)
+    
     if ((current_trial % 2) == 1):
         s += "taskset -c 1-9,21-29 perf stat -M "
     else:

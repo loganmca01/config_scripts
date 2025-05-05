@@ -389,3 +389,25 @@ src/arch/generic/debugfaults.hh:145: warn: MOVNTDQ: Ignoring non-temporal hint, 
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+/home/mcallisl/gem5/build/ALL/gem5.opt: Terminated
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload dedup':
+
+ 1,425,921,815,982      CPU_CLK_UNHALTED.REF_XCLK        #     47.1 %  tma_frontend_bound     
+                                                  #      6.2 %  tma_bad_speculation    
+                                                  #     26.8 %  tma_retiring           
+                                                  #     19.9 %  tma_backend_bound        (62.49%)
+ 4,429,655,039,755      IDQ.MS_UOPS                                                             (62.49%)
+91,089,570,464,129      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
+ 1,128,976,355,403      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
+ 1,425,274,390,719      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.00%)
+48,370,256,803,075      CPU_CLK_UNHALTED.THREAD                                                 (62.49%)
+51,916,007,378,779      UOPS_RETIRED.RETIRE_SLOTS                                               (62.49%)
+61,682,008,117,731      UOPS_ISSUED.ANY                                                         (62.49%)
+
+   14567.530174776 seconds time elapsed
+
+   14178.665228000 seconds user
+      30.022476000 seconds sys
+
+

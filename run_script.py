@@ -41,6 +41,7 @@ workload_choices = [
     "blackscholes",
     "dedup",
     "fluidanimate",
+    "canneal",
 ]
 
 parser = argparse.ArgumentParser()

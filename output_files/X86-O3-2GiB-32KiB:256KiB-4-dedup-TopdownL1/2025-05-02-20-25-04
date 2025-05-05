@@ -386,3 +386,26 @@ build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+/home/mcallisl/gem5/build/ALL/gem5.opt: Terminated
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload dedup':
+
+   699,292,800,264      CPU_CLK_UNHALTED.REF_XCLK        #     45.4 %  tma_frontend_bound     
+                                                  #      6.0 %  tma_bad_speculation    
+                                                  #     25.6 %  tma_retiring           
+                                                  #     23.0 %  tma_backend_bound        (62.48%)
+ 2,040,046,205,284      IDQ.MS_UOPS                                                             (62.48%)
+42,572,584,500,025      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
+   519,379,663,500      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
+   697,989,394,247      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.00%)
+23,450,929,159,791      CPU_CLK_UNHALTED.THREAD                                                 (62.48%)
+23,993,630,683,807      UOPS_RETIRED.RETIRE_SLOTS                                               (62.48%)
+28,549,981,719,271      UOPS_ISSUED.ANY                                                         (62.48%)
+
+    7215.553347074 seconds time elapsed
+
+    7062.709134000 seconds user
+      20.264178000 seconds sys
+
+

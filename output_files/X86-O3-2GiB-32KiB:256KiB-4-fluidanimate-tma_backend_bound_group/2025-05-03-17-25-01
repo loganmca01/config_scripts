@@ -19,9 +19,9 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 24.1.0.2
 gem5 compiled Apr  8 2025 17:46:57
-gem5 started May  2 2025 20:25:08
-gem5 executing on turing301, pid 248992
-command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload dedup
+gem5 started May  3 2025 17:25:06
+gem5 executing on turing301, pid 251023
+command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload fluidanimate
 
 info: Standard input is not a terminal, disabling listeners.
 test2
@@ -363,16 +363,18 @@ src/arch/x86/kvm/x86_cpu.cc:563: warn: cs limit (0xffffffff) and g (0) combinati
 src/arch/x86/kvm/x86_cpu.cc:563: warn: cs limit (0xffffffff) and g (0) combination is illegal.
 src/dev/x86/pc.cc:117: warn: Don't know what interrupt to clear for console.
 src/dev/x86/i8042.cc:290: warn: Write to unknown i8042 (keyboard controller) command port.
+src/sim/simulate.cc:199: info: Entering event queue @ 19124923530070.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 19125933509746.  Starting simulation...
 src/sim/power_state.cc:105: warn: PowerState: Already in the requested power state, request ignored
 Done booting Linux
 switching cpus
-2025-05-02-20-27-08
+2025-05-03-17-28-37
 ps: 
 success
     PID PSR COMMAND
- 248992  12 gem5.opt
+ 251023  13 gem5.opt
 
-src/sim/simulate.cc:199: info: Entering event queue @ 17870843636632.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 19127007903610.  Starting simulation...
 src/mem/ruby/system/Sequencer.cc:704: warn: Replacement policy updates recently became the responsibility of SLICC state machines. Make sure to setMRU() near callbacks in .sm files!
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
@@ -384,29 +386,42 @@ build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
-src/arch/generic/debugfaults.hh:145: warn: MOVNTDQ: Ignoring non-temporal hint, modeling as cacheable!
-build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
-/home/mcallisl/gem5/build/ALL/gem5.opt: Terminated
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+end of benchmark, stat dump
 
- Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload dedup':
+2025-05-03-22-07-33
+ps: 
+success
+    PID PSR COMMAND
+ 251023  33 gem5.opt
 
-   712,564,614,754      CPU_CLK_UNHALTED.REF_XCLK        #     47.3 %  tma_frontend_bound     
-                                                  #      6.1 %  tma_bad_speculation    
-                                                  #     25.1 %  tma_retiring           
-                                                  #     21.5 %  tma_backend_bound        (62.48%)
- 2,096,795,491,476      IDQ.MS_UOPS                                                             (62.48%)
-45,776,340,540,384      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
-   549,259,235,292      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
-   711,729,729,139      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.00%)
-24,200,092,706,252      CPU_CLK_UNHALTED.THREAD                                                 (62.48%)
-24,326,906,003,543      UOPS_RETIRED.RETIRE_SLOTS                                               (62.48%)
-29,096,805,678,211      UOPS_ISSUED.ANY                                                         (62.48%)
 
-    7221.794218805 seconds time elapsed
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload fluidanimate':
 
-    7085.193243000 seconds user
-      20.239145000 seconds sys
+58,351,868,463,407      INST_RETIRED.ANY                 #      7.6 %  tma_core_bound         
+                                                  #     12.7 %  tma_memory_bound         (31.25%)
+ 1,888,997,593,505      RESOURCE_STALLS.SB                                                      (31.25%)
+ 1,672,612,540,593      CPU_CLK_UNHALTED.REF_XCLK                                               (31.25%)
+105,040,754,575,490      IDQ_UOPS_NOT_DELIVERED.CORE                                             (31.25%)
+ 7,415,070,186,975      RS_EVENTS.EMPTY_CYCLES                                                  (31.25%)
+ 1,465,567,487,107      INT_MISC.RECOVERY_CYCLES_ANY                                            (25.00%)
+13,446,898,229,529      UOPS_EXECUTED.CYCLES_GE_3_UOPS_EXEC                                        (25.00%)
+32,889,374,731,972      UOPS_EXECUTED.CYCLES_GE_1_UOP_EXEC                                        (25.00%)
+22,622,653,538,163      UOPS_EXECUTED.CYCLES_GE_2_UOPS_EXEC                                        (25.00%)
+ 1,672,365,110,207      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (25.00%)
+56,781,859,401,081      CPU_CLK_UNHALTED.THREAD                                                 (31.25%)
+16,053,824,998,049      CYCLE_ACTIVITY.STALLS_MEM_ANY                                           (31.25%)
+60,003,158,311,505      UOPS_RETIRED.RETIRE_SLOTS                                               (31.25%)
+19,968,163,561,216      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (31.25%)
+23,900,814,776,449      CYCLE_ACTIVITY.STALLS_TOTAL                                             (31.25%)
+73,037,470,120,691      UOPS_ISSUED.ANY                                                         (25.00%)
+
+   16948.967169007 seconds time elapsed
+
+   16648.479288000 seconds user
+      22.388642000 seconds sys
 
 

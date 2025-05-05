@@ -3,9 +3,11 @@ import csv
 import re
 
 def extract_metrics_from_file(filepath):
-    """Extract TMA metrics from a given file."""
+    
     metrics = {}
     pattern = re.compile(r'#\s+([\d\.]+)\s+%\s+(\S+)')
+    time_elapsed_pattern = re.compile(r'(\d+\.\d+) seconds time elapsed')
+
     
     with open(filepath, 'r') as file:
         for line in file:
@@ -13,6 +15,10 @@ def extract_metrics_from_file(filepath):
             if match:
                 percent, metric = match.groups()
                 metrics[metric] = percent
+
+            time_match = time_elapsed_pattern.search(line)
+            if time_match:
+                metrics['time_elapsed'] = time_match.group(1)
     return metrics
 
 def process_directory(directory):
