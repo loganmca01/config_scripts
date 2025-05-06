@@ -1,0 +1,6 @@
+Metric,2025-05-03-07-43-37,2025-05-03-07-43-39
+time_elapsed,16988.327024638,17171.725241126
+tma_backend_bound,20.4,20.3
+tma_bad_speculation,7.0,7.0
+tma_frontend_bound,46.2,46.7
+tma_retiring,26.4,26.0

@@ -1,0 +1,4 @@
+Metric,2025-05-03-12-34-56,2025-05-03-12-34-58
+time_elapsed,16844.804104552,17096.273183741
+tma_fetch_bandwidth,11.1,11.0
+tma_fetch_latency,35.0,36.3
