@@ -384,3 +384,30 @@ build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+end of benchmark, stat dump
+
+2025-05-07-00-37-48
+ps: 
+success
+    PID PSR COMMAND
+ 258927  36 gem5.opt
+
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload canneal':
+
+   666,674,344,544      CPU_CLK_UNHALTED.REF_XCLK        #     12.1 %  tma_fetch_bandwidth    
+                                                  #     34.6 %  tma_fetch_latency        (99.84%)
+42,207,964,641,173      IDQ_UOPS_NOT_DELIVERED.CORE                                             (99.84%)
+   666,642,390,401      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (99.84%)
+22,604,898,252,474      CPU_CLK_UNHALTED.THREAD                                                 (99.84%)
+ 7,811,345,242,516      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (99.84%)
+
+    6788.304965908 seconds time elapsed
+
+    6623.994106000 seconds user
+      21.988447000 seconds sys
+
+

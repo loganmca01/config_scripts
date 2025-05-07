@@ -19,9 +19,9 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 24.1.0.2
 gem5 compiled Apr  8 2025 17:46:57
-gem5 started May  6 2025 22:44:42
-gem5 executing on turing301, pid 258926
-command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload canneal
+gem5 started May  7 2025 08:54:39
+gem5 executing on turing301, pid 259800
+command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload fluidanimate
 
 info: Standard input is not a terminal, disabling listeners.
 test2
@@ -363,20 +363,16 @@ src/arch/x86/kvm/x86_cpu.cc:563: warn: cs limit (0xffffffff) and g (0) combinati
 src/arch/x86/kvm/x86_cpu.cc:563: warn: cs limit (0xffffffff) and g (0) combination is illegal.
 src/dev/x86/pc.cc:117: warn: Don't know what interrupt to clear for console.
 src/dev/x86/i8042.cc:290: warn: Write to unknown i8042 (keyboard controller) command port.
-src/sim/simulate.cc:199: info: Entering event queue @ 20186294154346.  Starting simulation...
-src/sim/simulate.cc:199: info: Entering event queue @ 20187307981171.  Starting simulation...
-src/sim/simulate.cc:199: info: Entering event queue @ 20188369252837.  Starting simulation...
-src/sim/simulate.cc:199: info: Entering event queue @ 20189376593821.  Starting simulation...
 src/sim/power_state.cc:105: warn: PowerState: Already in the requested power state, request ignored
 Done booting Linux
 switching cpus
-2025-05-06-22-49-01
+2025-05-07-08-58-09
 ps: 
 success
     PID PSR COMMAND
- 258926  25 gem5.opt
+ 259800  34 gem5.opt
 
-src/sim/simulate.cc:199: info: Entering event queue @ 20190434409280.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 19764460699390.  Starting simulation...
 src/mem/ruby/system/Sequencer.cc:704: warn: Replacement policy updates recently became the responsibility of SLICC state machines. Make sure to setMRU() near callbacks in .sm files!
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
@@ -394,25 +390,30 @@ build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimpl
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
 end of benchmark, stat dump
 
-2025-05-07-00-38-57
+2025-05-07-13-35-13
 ps: 
 success
     PID PSR COMMAND
- 258926   5 gem5.opt
+ 259800  14 gem5.opt
 
 
- Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload canneal':
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload fluidanimate':
 
-   666,353,512,550      CPU_CLK_UNHALTED.REF_XCLK        #     12.0 %  tma_fetch_bandwidth    
-                                                  #     33.8 %  tma_fetch_latency        (99.83%)
-41,548,797,016,455      IDQ_UOPS_NOT_DELIVERED.CORE                                             (99.83%)
-   666,316,426,554      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (99.83%)
-22,645,745,823,798      CPU_CLK_UNHALTED.THREAD                                                 (99.83%)
- 7,662,438,859,767      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (99.83%)
+ 1,662,608,792,148      CPU_CLK_UNHALTED.REF_XCLK        #     46.1 %  tma_frontend_bound     
+                                                  #      7.1 %  tma_bad_speculation    
+                                                  #     26.6 %  tma_retiring           
+                                                  #     20.3 %  tma_backend_bound        (62.49%)
+ 4,489,893,368,581      IDQ.MS_UOPS                                                             (62.49%)
+103,928,596,054,936      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
+ 1,466,953,457,561      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
+ 1,661,676,407,140      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.00%)
+56,425,784,971,947      CPU_CLK_UNHALTED.THREAD                                                 (62.49%)
+59,917,881,014,444      UOPS_RETIRED.RETIRE_SLOTS                                               (62.49%)
+72,986,820,339,061      UOPS_ISSUED.ANY                                                         (62.49%)
 
-    6857.819124591 seconds time elapsed
+   16837.299165198 seconds time elapsed
 
-    6629.432225000 seconds user
-      16.400687000 seconds sys
+   16543.960134000 seconds user
+      22.833265000 seconds sys
 
 
