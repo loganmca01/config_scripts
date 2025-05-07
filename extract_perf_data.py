@@ -7,6 +7,7 @@ def extract_metrics_from_file(filepath):
     metrics = {}
     pattern = re.compile(r'#\s+([\d\.]+)\s+%\s+(\S+)')
     time_elapsed_pattern = re.compile(r'(\d+\.\d+) seconds time elapsed')
+    total_uops_pattern = re.compile(r'([\d,]+)\s+UOPS_ISSUED.ANY')
 
     
     with open(filepath, 'r') as file:
@@ -19,6 +20,10 @@ def extract_metrics_from_file(filepath):
             time_match = time_elapsed_pattern.search(line)
             if time_match:
                 metrics['time_elapsed'] = time_match.group(1)
+
+            total_match = total_uops_pattern.search(line)
+            if total_match:
+                metrics['total_uops'] = total_match.group(1)
     return metrics
 
 def process_directory(directory):
