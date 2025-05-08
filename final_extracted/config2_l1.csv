@@ -1,0 +1,7 @@
+Metric,2025-05-04-03-17-15,2025-05-04-03-17-17
+time_elapsed,1710.371038190,1603.224055444
+tma_backend_bound,22.9,20.4
+tma_bad_speculation,6.6,6.6
+tma_frontend_bound,44.4,45.9
+tma_retiring,26.0,27.1
+total_uops,"6,448,251,192,632","6,412,772,557,131"

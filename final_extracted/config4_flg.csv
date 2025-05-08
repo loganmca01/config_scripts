@@ -1,0 +1,8 @@
+Metric,2025-05-04-06-41-39,2025-05-04-06-41-41
+time_elapsed,1147.099593148,1101.485454971
+tma_branch_resteers,11.7,11.1
+tma_dsb_switches,2.0,2.1
+tma_icache_misses,17.4,17.0
+tma_itlb_misses,5.6,5.4
+tma_lcp,0.1,0.1
+tma_ms_switches,1.2,1.2
