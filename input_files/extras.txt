@@ -1,2 +1,2 @@
 X86 O3 2GiB 64KiB:512KiB:4MiB 4 blackscholes TopdownL1
-X86 O3 2GiB 64KiB:512KiB:4MiB 4 blackscholes tma_frontend_bound_group
+X86 O3 2GiB 64KiB:512KiB:4MiB 4 blackscholes TopdownL1
