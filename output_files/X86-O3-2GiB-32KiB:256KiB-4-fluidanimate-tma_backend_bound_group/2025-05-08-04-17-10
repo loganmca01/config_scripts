@@ -19,8 +19,8 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 24.1.0.2
 gem5 compiled Apr  8 2025 17:46:57
-gem5 started May  7 2025 18:36:47
-gem5 executing on turing301, pid 260723
+gem5 started May  8 2025 04:17:17
+gem5 executing on turing301, pid 261299
 command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload fluidanimate
 
 info: Standard input is not a terminal, disabling listeners.
@@ -366,13 +366,13 @@ src/dev/x86/i8042.cc:290: warn: Write to unknown i8042 (keyboard controller) com
 src/sim/power_state.cc:105: warn: PowerState: Already in the requested power state, request ignored
 Done booting Linux
 switching cpus
-2025-05-07-18-41-03
+2025-05-08-04-20-48
 ps: 
 success
     PID PSR COMMAND
- 260723  35 gem5.opt
+ 261299  21 gem5.opt
 
-src/sim/simulate.cc:199: info: Entering event queue @ 19903585446046.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 19194606621892.  Starting simulation...
 src/mem/ruby/system/Sequencer.cc:704: warn: Replacement policy updates recently became the responsibility of SLICC state machines. Make sure to setMRU() near callbacks in .sm files!
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
@@ -388,25 +388,36 @@ build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimpl
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
 end of benchmark, stat dump
 
-2025-05-07-23-20-29
+2025-05-08-09-00-24
 ps: 
 success
     PID PSR COMMAND
- 260723  35 gem5.opt
+ 261299  21 gem5.opt
 
 
  Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 32KiB:256KiB --cores 4 --workload fluidanimate':
 
- 1,682,992,922,860      CPU_CLK_UNHALTED.REF_XCLK        #     11.0 %  tma_fetch_bandwidth    
-                                                  #     35.6 %  tma_fetch_latency        (99.94%)
-106,535,023,932,376      IDQ_UOPS_NOT_DELIVERED.CORE                                             (99.94%)
- 1,682,929,791,789      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (99.94%)
-57,207,318,750,168      CPU_CLK_UNHALTED.THREAD                                                 (99.94%)
-20,340,322,193,873      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (99.94%)
+58,229,032,667,350      INST_RETIRED.ANY                 #      7.7 %  tma_core_bound         
+                                                  #     13.1 %  tma_memory_bound         (31.25%)
+ 1,924,929,479,383      RESOURCE_STALLS.SB                                                      (31.25%)
+ 1,675,716,233,577      CPU_CLK_UNHALTED.REF_XCLK                                               (31.25%)
+104,553,729,646,203      IDQ_UOPS_NOT_DELIVERED.CORE                                             (31.25%)
+ 7,354,121,850,206      RS_EVENTS.EMPTY_CYCLES                                                  (31.25%)
+ 1,456,697,810,690      INT_MISC.RECOVERY_CYCLES_ANY                                            (25.00%)
+13,406,513,211,791      UOPS_EXECUTED.CYCLES_GE_3_UOPS_EXEC                                        (25.00%)
+32,839,125,958,713      UOPS_EXECUTED.CYCLES_GE_1_UOP_EXEC                                        (25.00%)
+22,552,957,016,978      UOPS_EXECUTED.CYCLES_GE_2_UOPS_EXEC                                        (25.00%)
+ 1,675,197,860,194      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (25.00%)
+56,891,680,936,231      CPU_CLK_UNHALTED.THREAD                                                 (31.25%)
+16,280,024,043,167      CYCLE_ACTIVITY.STALLS_MEM_ANY                                           (31.25%)
+59,873,228,794,027      UOPS_RETIRED.RETIRE_SLOTS                                               (31.25%)
+19,896,039,943,243      IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE                                        (31.25%)
+24,062,331,105,419      CYCLE_ACTIVITY.STALLS_TOTAL                                             (31.25%)
+72,881,450,206,436      UOPS_ISSUED.ANY                                                         (25.00%)
 
-   17023.570208527 seconds time elapsed
+   16990.029049797 seconds time elapsed
 
-   16758.382659000 seconds user
-      15.282506000 seconds sys
+   16680.852877000 seconds user
+      22.900849000 seconds sys
 
 
