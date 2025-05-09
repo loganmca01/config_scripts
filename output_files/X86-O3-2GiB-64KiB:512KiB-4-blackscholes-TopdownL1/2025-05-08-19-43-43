@@ -380,3 +380,38 @@ build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+end of benchmark, stat dump
+
+2025-05-08-20-12-33
+ps: 
+success
+    PID PSR COMMAND
+ 262124   1 gem5.opt
+
+
+ Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 64KiB:512KiB --cores 4 --workload blackscholes':
+
+   152,571,161,823      CPU_CLK_UNHALTED.REF_XCLK        #     44.3 %  tma_frontend_bound     
+                                                  #      6.5 %  tma_bad_speculation    
+                                                  #     25.8 %  tma_retiring           
+                                                  #     23.4 %  tma_backend_bound        (62.40%)
+   405,787,514,152      IDQ.MS_UOPS                                                             (62.41%)
+ 9,178,492,115,142      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
+   119,071,864,365      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
+   152,251,162,600      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.00%)
+ 5,181,177,915,736      CPU_CLK_UNHALTED.THREAD                                                 (62.41%)
+ 5,342,836,200,411      UOPS_RETIRED.RETIRE_SLOTS                                               (62.41%)
+ 6,449,068,017,096      UOPS_ISSUED.ANY                                                         (62.41%)
+
+    1726.085089222 seconds time elapsed
+
+    1508.871479000 seconds user
+      17.054895000 seconds sys
+
+

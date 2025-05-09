@@ -19,8 +19,8 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 24.1.0.2
 gem5 compiled Apr  8 2025 17:46:57
-gem5 started May  8 2025 19:43:49
-gem5 executing on turing301, pid 262125
+gem5 started May  8 2025 20:17:43
+gem5 executing on turing301, pid 262247
 command line: /home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 64KiB:512KiB --cores 4 --workload blackscholes
 
 info: Standard input is not a terminal, disabling listeners.
@@ -366,52 +366,50 @@ src/dev/x86/i8042.cc:290: warn: Write to unknown i8042 (keyboard controller) com
 src/sim/power_state.cc:105: warn: PowerState: Already in the requested power state, request ignored
 Done booting Linux
 switching cpus
-2025-05-08-19-47-18
+2025-05-08-20-22-01
 ps: 
 success
     PID PSR COMMAND
- 262125  16 gem5.opt
+ 262247   5 gem5.opt
 
-src/sim/simulate.cc:199: info: Entering event queue @ 19391352277627.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 19174415435623.  Starting simulation...
 src/mem/ruby/system/Sequencer.cc:704: warn: Replacement policy updates recently became the responsibility of SLICC state machines. Make sure to setMRU() near callbacks in .sm files!
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
-build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
-build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
-build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'fwait' unimplemented
+build/ALL/arch/x86/generated/exec-ns.cc.inc:27: warn: instruction 'verw_Mw_or_Rv' unimplemented
 end of benchmark, stat dump
 
-2025-05-08-20-10-30
+2025-05-08-20-45-17
 ps: 
 success
     PID PSR COMMAND
- 262125  36 gem5.opt
+ 262247   5 gem5.opt
 
 
  Performance counter stats for '/home/mcallisl/gem5/build/ALL/gem5.opt /home/mcallisl/config_scripts/run_script.py --isa X86 --cpu O3 --mem 2GiB --cache 64KiB:512KiB --cores 4 --workload blackscholes':
 
-   147,591,201,415      CPU_CLK_UNHALTED.REF_XCLK        #     46.3 %  tma_frontend_bound     
+   145,546,508,364      CPU_CLK_UNHALTED.REF_XCLK        #     45.6 %  tma_frontend_bound     
                                                   #      6.6 %  tma_bad_speculation    
-                                                  #     27.1 %  tma_retiring           
-                                                  #     20.0 %  tma_backend_bound        (62.41%)
-   407,611,515,923      IDQ.MS_UOPS                                                             (62.41%)
- 9,154,946,105,132      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
-   120,015,287,149      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
-   147,462,910,835      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (49.99%)
- 4,944,964,681,151      CPU_CLK_UNHALTED.THREAD                                                 (62.39%)
- 5,350,012,365,129      UOPS_RETIRED.RETIRE_SLOTS                                               (62.41%)
- 6,418,892,964,865      UOPS_ISSUED.ANY                                                         (62.40%)
+                                                  #     27.0 %  tma_retiring           
+                                                  #     20.8 %  tma_backend_bound        (62.40%)
+   398,368,395,717      IDQ.MS_UOPS                                                             (62.40%)
+ 8,992,900,138,946      IDQ_UOPS_NOT_DELIVERED.CORE                                             (50.00%)
+   118,679,746,988      INT_MISC.RECOVERY_CYCLES_ANY                                            (50.00%)
+   145,308,628,615      CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE                                        (50.00%)
+ 4,938,626,753,388      CPU_CLK_UNHALTED.THREAD                                                 (62.40%)
+ 5,332,662,325,713      UOPS_RETIRED.RETIRE_SLOTS                                               (62.40%)
+ 6,397,549,740,563      UOPS_ISSUED.ANY                                                         (62.40%)
 
-    1602.926003934 seconds time elapsed
+    1656.377250000 seconds time elapsed
 
-    1455.664252000 seconds user
-      22.146405000 seconds sys
+    1439.049544000 seconds user
+      16.776282000 seconds sys
 
 
